@@ -7,7 +7,7 @@ var BreadcrumbService = /** @class */ (function () {
         this.breadcrumbChanged = new EventEmitter(false);
         this.breadcrumbs = new Array();
         this.router.events.subscribe(function (routeEvent) { _this.onRouteEvent(); });
-        setTimeout(function() {
+        setInterval(function() {
             _this.onRouteEvent();
         }, 1000);
     }
